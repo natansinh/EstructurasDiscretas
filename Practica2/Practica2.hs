@@ -46,3 +46,54 @@ Uso: esDescendente 10 9 8 7 = true
 -}
 esDescendente :: Ord a => a -> a -> a -> a -> Bool
 esDescendente x y z w = (x > y) && (y > z) && (z > w)
+
+--Ejercicio 8
+{-Función: imc
+Descripción; Caulcula el Ídice de Masa Corporal a partir del peso en kilogramos y la estatura en centímetros o metros, devolviendo la categoría de la OMS: bajo, normal, sobrepeso u obesidad.
+Uso: imc 53.5 161 = normal
+-}
+imc :: Float -> Float -> String
+imc kg estatura = 
+  let m = if estatura > 3.0 then estatura / 100.0 else estatura
+      valorImc = kg / (m * m)
+  in if valorImc < 18.5
+     then "bajo"
+     else if valorImc < 25.0
+          then "normal"
+          else if valorImc < 30.0
+               then "sobrepeso"
+               else "obesidad"
+
+-- Ejercicio 9
+{-Función: Hipotenusa
+Descripción: Calcula la hipotenusa de un triángulo rectángulo dadas su base y su altura.
+Uso: hipotenusa 9.0 12.0 = 15
+-}
+hipotenusa :: Float -> Float -> Float
+hipotenusa b h = sqrt (b^2 + h^2)
+
+--Ejercicio 10
+{-Función: PuntosRifa
+Descripción:Calcula los puntos de un boleto de tres dígitos asignando 10 puntos por suma de dígitos si empieza con par, o 5 puntos si empieza con impar.
+Uso: PuntosRifa 248 = 140 / PuntosRifa 315 = 45
+-}
+puntosRifa :: Int -> Int
+puntosRifa n =
+    let c = div n 100
+        d = mod (div n 10) 10
+        u = mod n 10
+        suma = c + d + u
+        factor = if even c then 10 else 5
+    in suma * factor
+
+--Ejercicio 11        
+{-Función: cuadrante
+Descripción: Determina el cuadrante (1, 2, 3 o 4) en el plano cartesiano donde se ubica el punto (x, y)
+Uso: cuadrante (-2.5) 4.1
+-}
+cuadrante :: Float -> Float -> Int
+cuadrante x y =
+ if x > 0 && y > 0 then 1
+ else if x < 0 && y > 0 then 2
+ else if x < 0 && y < 0 then 3
+ else 4
