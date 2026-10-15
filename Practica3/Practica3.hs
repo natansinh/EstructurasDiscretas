@@ -1,11 +1,6 @@
-ghci> :t (+)
-(+) :: Num a => a -> a -> a
-ghci> :info Num
-ghci> :info Int
-
 module Practica3 where
-import Paridad (esParBit)
--- Próximas funciones de la práctica 3
+
+import SPB (esParBit)
 
 data Plazo = Dias Float | Meses Float
     deriving (Show, Eq)

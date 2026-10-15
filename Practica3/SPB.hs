@@ -1,4 +1,4 @@
-module Paridad (esParBit) where
+module SPB (esParBit) where
 
 {- función: esParBit
 descripción: determina si un número entero es par utilizando mod

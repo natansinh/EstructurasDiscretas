@@ -1,4 +1,21 @@
-## ¿Cuál es la diferencia entre Num e Int? ##
-Num: Es un conjunto que define funciones y operaciones numéricas generales. No es un tipo de dato concreto por sí mismo, sino una categoría a la que pertenecen varios tipos numéricos (como Int, Integer, Float, Double).
-Int: Es un tipo de dato específico que representa números enteros con precisión finita. Limitado por el tamaño de palabra de la arquitectura de la máquina, por ejemplo, 64 bits.
-![Evidencia GHCi Num vs Int](NumInt.png)
+# Práctica 03: Mis tipos de datos y listas por compresión
+
+## Información General
+* **Objetivo:** Definir tipos de datos personalizados en Haskell y aplicar el uso de listas por comprensión junto con modularización para resolver problemas matemáticos y financieros.
+* **Tiempo requerido:** 3 horas
+
+## Diferencia entre Num e Int
+
+* **`Num`**: Es una clase de tipos que agrupa funciones numéricas generales (+, -, *). No representa un tipo numérico específico, sino la capacidad de operar numéricamente.
+* **`Int`**: Es un tipo de dato concreto de precisión finita que representa números enteros. Es una instancia concreta de la clase `Num`.
+
+### Evidencia GHCi
+![Diferencia entre Num e Int](./NumInt.png)
+
+## Estructura del Proyecto
+
+Practica3/
+├── NumInt.png
+├── Practica3.hs
+├── README.md
+└── SPB.hs
