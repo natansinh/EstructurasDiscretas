@@ -50,3 +50,13 @@ potenciaNat Cero n = Cero
 potenciaNat n Cero = S Cero
 -- Caso recursivo
 potenciaNat n (S m) = multiplicaNat n (potenciaNat n m)
+
+{- Función: facNat
+Descripción: la función devuelve el factorial del natural en natural.
+Uso: facNat ( S ( S ( S Cero ) ) ) = S ( S ( S ( S ( S ( S Cero ) ) ) ) )
+-}
+facNat :: Natural -> Natural
+-- CAso base
+facNat Cero = S Cero
+-- Caso recursivo
+facNat (S n) = multiplicaNat (S n) (facNat n)
